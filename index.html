@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="UTF-8"> <!-- Meta tag chỉ định bộ ký tự là UTF-8 -->
+    <!--[if IE]>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<![endif]-->
+    <!-- Meta tag cho việc phản ứng với kích thước màn hình -->
+    <!-- width=device-width: Thiết lập độ rộng của viewport bằng với độ rộng của thiết bị.
+         initial-scale=1: Thiết lập tỷ lệ phóng ban đầu của trang là 1. 
+         Điều này có nghĩa là trang sẽ được phóng to hoặc thu nhỏ sao cho nó hiển thị đúng kích thước trên màn hình của thiết bị.
+         shrink-to-fit=no: Ngăn chặn trình duyệt tự động co lại nội dung để vừa với màn hình. Nếu giá trị là "no".
+         trình duyệt sẽ không co lại nội dung.
+      Điều này giúp đảm bảo rằng trang web sẽ hiển thị đúng trên các thiết bị di động và máy tính bảng
+        và không bị co lại tự động để vừa vào kích thước màn hình.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <!--Đây là "meta tag" dành cho mô tả trang web. Thuộc tính content nên được điền với một đoạn văn bản mô tả ngắn về nội dung của trang web. 
+      Mô tả này thường được hiển thị trong các kết quả tìm kiếm của công cụ tìm kiếm và có thể giúp người dùng hiểu nhanh chóng về nội dung của trang -->
+    <meta name="author" content="">
+    <!--Đây là "meta tag" dành cho tác giả của trang web. Thuộc tính content nên được điền với tên của người tạo ra hoặc sở hữu trang web. 
+      Thông tin này không nhất thiết phải là tên người, nó có thể là tên của tổ chức hoặc doanh nghiệp quản lý trang web.-->
+    <link href="images/favicon.png" rel="shortcut icon">
+    <!-- Liên kết đến biểu tượng trang (favicon) -->
+    <title>MANIS Jewelry</title> <!-- Tiêu đề trang -->
+    <!-- Liên kết Google Font cho Open Sans với các trọng lượng khác nhau -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+      <!-- Liên kết CSS của Vendor- các thành phần (plugin) và thư viện nền được tích hợp vào trang web. -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <!-- Liên kết CSS của Utility-Spacing- quản lý và thiết lập khoảng cách của các phần tử trên trang web. -->
+    <link rel="stylesheet" href="css/utility.css">
+    <!-- Liên kết CSS của Trang -->
+    <link rel="stylesheet" href="css/app.css">
+      <style>
+    /*  THÊM CSS để đặt mũi tên chuyển đổi ở hai bên của màn hình */
+.owl-carousel .owl-nav {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 999;
+}
+
+.owl-carousel .owl-prev, .owl-carousel .owl-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.owl-carousel .owl-prev {
+  left: 10px; /* Điều chỉnh khoảng cách từ mép trái */
+}
+
+.owl-carousel .owl-next {
+  right: 10px; /* Điều chỉnh khoảng cách từ mép phải */
+}
+
+.owl-carousel .owl-prev i,
+.owl-carousel .owl-next i {
+  background-color: #d8d8d8; /* Màu xám nhạt */
+  padding: 10px; /* Tăng kích thước nền của mũi tên */
+  font-size: 24px; /* Điều chỉnh kích thước của mũi tên theo nhu cầu */
+  color: #000000; /* Màu chữ */
+}
+.owl-carousel .owl-prev i:hover,
+.owl-carousel .owl-next i:hover {
+  background-color: #F4af3d; /* Màu vàng khi hover */
+  color: #fff; /* Màu chữ khi hover */
+}
+</style>
+  </head>
+  <body class="config">
+    <!--====== Trang ======-->
+    <div id="app">
+      <!--====== header chính của trang ======-->
+      <header class="header--style-1">
+        <!--====== Thanh điều hướng 1 ======-->
+        <nav class="primary-nav primary-nav-wrapper--border">
+          <div class="container">
+            <!--====== Thanh điều hướng chính ======-->
+            <div class="primary-nav">
+              <!--====== Điều chỉnh logo ======-->
+              <a class="main-logo" href="index.html">
+                <!--Thêm hình logo vào hàng này-->
+               <img width="220px" height="80px" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/398407516_6926912964055207_4553193293156142557_n.png?_nc_cat=103&ccb=1-7&_nc_sid=510075&_nc_ohc=sYyOw5P6qrYAX-XZHKN&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTt3nG3NfzYcJde4y8__Ygbui1uqheZEldT3lf2UMW4dQ&oe=65A48466" alt=""> 
+              </a>
+              <!--====== Kết thúc điều chỉnh logo  ======-->
+              <!--====== Điều chỉnh thanh tìm kiếm ======-->
+              <form class="main-form"> <!--Biểu mẫu được điều chỉnh bởi lớp là main-form -->
+                <label for="main-search"></label>
+                <!--Trường nhập liệu (input) kiểu văn bản (text) được điều chỉnh bởi lớp có tên như bên dưới 
+                  và Gợi ý hoặc mô tả ngắn về nội dung được mong đợi -->
+                <input class="input-text input-text--border-radius input-text--style-1" type="text" id="main-search" placeholder="Tìm kiếm">
+                <!-- Nút (button) tìm kiếm, có biểu tượng (icon) từ thư viện Font Awesome được điều chỉnh bởi lớp có tên btn btn--icon fas fa-search main-search-button  -->
+                <button class="btn btn--icon fas fa-search main-search-button" type="submit"></button>
+              </form>
+              <!--====== Kết thúc điều chỉnh thanh tìm kiếm ======-->
+              <!--====== Thành phần đổ xuống ======-->
+              <div class="menu-init" id="navigation">
+                
+                <!--====== Menu ======-->
+                <div class="ah-lg-mode">
+
+                  <!--====== Danh sách ======-->
+                  <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
+                    <li> <!--Thêm home vào header-->
+                        <a href="index.html"> <!-- Link đến trang chủ -->
+                          <i class="fas fa-home u-c-brand"></i> <!-- Icon home sử dụng Font Awesome -->
+                        </a>
+                    </li>
+                    <li><!--Thêm wishlist vào header-->
+                        <a href="wishlist.html">  <!-- Link đến trang wishlist -->
+                          <i class="far fa-heart"></i> <!-- Icon heart (dùng Font Awesome) -->
+                        </a>
+                    </li>
+                    <!-- Đổ xuống cho Giỏ Hàng Mini -->
+                    <li class="has-dropdown">
+                      <!-- Điều chỉnh bởi class có tên -->
+                        <a class="mini-cart-shop-link">
+                          <i class="fas fa-shopping-bag"></i> <!-- Biểu tượng Túi mua sắm -->
+                          <span class="total-item-round">3</span>  <!-- Tổng số sản phẩm trong giỏ hàng -->
+                        </a>
+                        <!--====== Đổ xuống ======-->
+                        <span class="js-menu-toggle"></span>
+                        <div class="mini-cart">
+                           <!-- Vùng chứa cho Giỏ Hàng Mini -->
+                          <div class="mini-product-container gl-scroll u-s-m-b-15">
+                            <!-- Vùng chứa cho Sản Phẩm Mini -->
+                            <div class="card-mini-product"> <!--Điều chỉnh cho sản phẩm mini 1-->
+                              <div class="mini-product"><!-- Điều chỉnh thông tin về Sản Phẩm Mini -->
+                                <div class="mini-product__image-wrapper">  <!-- Điều chỉnh Hình ảnh cho Sản Phẩm Mini -->
+                                  <a class="mini-product__link" href="#"> <!--Điều chỉnh Link sản phẩm-->
+                                    <!--Hình bộ sản phẩm hồ điệp đa sắc-->
+                                    <img class="u-img-fluid" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC019.1.png" alt="">
+                                  </a>
+                                </div>
+                                <div class="mini-product__info-wrapper"> <!-- Điều chỉnh Thông tin chi tiết Sản Phẩm Mini -->
+                                  <span class="mini-product__category">
+                                    <a href="shop-side-version-2.html">Dây chuyền</a>
+                                  </span>
+                                  <span class="mini-product__name">
+                                    <a href="#">Bộ Sản Phẩm Bạc 925 Hồ Điệp Đa Sắc</a><!--Thêm link product detail-->
+                                  </span>
+                                  <span class="mini-product__quantity">1 x</span>
+                                  <span class="mini-product__price">258.000VND</span>
+                                </div>
+                              </div>
+                              <a class="mini-product__delete-link far fa-trash-alt"></a> <!-- Điều chỉnh Liên kết Xóa Sản Phẩm -->
+                            </div>
+                            <!-- Kết thúc - Thẻ cho Sản Phẩm Mini - Sản phẩm 1 -->
+                             <!-- Lặp lại cấu trúc tương tự cho Sản phẩm 2 và Sản phẩm 3 -->
+                            <!--Điều chỉnh cho sản phẩm mini 2-->
+                            <div class="card-mini-product">
+                              <div class="mini-product">
+                                <div class="mini-product__image-wrapper">
+                                  <a class="mini-product__link" href="#"><!--Link sản phẩm-->
+                                    <img class="u-img-fluid" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC008-300x300.png" alt=""> <!--Hình dây chuyền bông tuyết đính đá-->
+                                  </a>
+                                </div>
+                                <div class="mini-product__info-wrapper">
+                                  <span class="mini-product__category">
+                                    <a href="shop-side-version-2.html">Dây chuyền</a>
+                                  </span>
+                                  <span class="mini-product__name">
+                                    <a href="#">Dây Chuyền 925 Bông Tuyến Đính Đá</a><!--Thêm link product detail-->
+                                  </span>
+                                  <span class="mini-product__quantity">1 x</span>
+                                  <span class="mini-product__price">135.00VND</span>
+                                </div>
+                              </div>
+                              <a class="mini-product__delete-link far fa-trash-alt"></a>
+                            </div>
+                             <!-- Kết thúc - Thẻ cho Sản Phẩm Mini - Sản phẩm 2 -->
+                           <!--Điều chỉnh cho sản phẩm mini 3-->
+                            <div class="card-mini-product">
+                              <div class="mini-product">
+                                <div class="mini-product__image-wrapper">
+                                  <a class="mini-product__link" href="#"> <!--Link sản phẩm-->
+                                    <img class="u-img-fluid" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC007.1.png" alt=""><!--Hình dây chuyền 925 cánh thiên thần đổi màu-->
+                                  </a>
+                                </div>
+                                <div class="mini-product__info-wrapper">
+                                  <span class="mini-product__category">
+                                    <a href="shop-side-version-2.html">Dây chuyền</a>
+                                  </span>
+                                  <span class="mini-product__name">
+                                    <a href="#">Dây Chuyền 925 Cánh Thiên Thần Đổi Màu</a><!--Thêm link product detail-->
+                                  </span>
+                                  <span class="mini-product__quantity">1 x</span>
+                                  <span class="mini-product__price">185.000VND</span>
+                                </div>
+                              </div>
+                              <a class="mini-product__delete-link far fa-trash-alt"></a>
+                            </div>
+                            <!-- Kết thúc - Thẻ cho Sản Phẩm Mini - Sản phẩm 3 -->
+                          </div>
+                          <!--====== Kết thúc điều chỉnh vùng chứa cho mini cart ======-->
+                          <!-- Điều chỉnh phần tạm tính và thao tác của các sản phẩm mini -->
+                          <div class="mini-product-stat">
+                            <div class="mini-total"> <!-- Điều chỉnh hiển thị thông tin về Tổng cộng -->
+                              <span class="subtotal-text">Tạm tính</span>
+                              <span class="subtotal-value">578.000VND</span>
+                            </div>
+                            <div class="mini-action">  <!-- Hành động trong giỏ hàng mini -->
+                              <a class="mini-link btn--e-brand-b-2" href="checkout.html">TIẾN HÀNH THANH TOÁN</a> <!-- Liên kết tới trang thanh toán -->
+                              <a class="mini-link-2 btn--e-transparent-secondary-b-2" href="cart.html">Xem giỏ hàng</a> <!-- Liên kết tới trang giỏ hàng -->
+                            </div>
+                          </div>
+                         <!-- Kết thúc điều chỉnh phần tạm tính và thao tác của các sản phẩm mini -->
+                        </div>
+                         <!-- Kết thúc đổ xuống cho Giỏ Hàng Mini -->
+                    </li>
+                    <!--Tạo ra một cửa sổ thông báo nhỏ (tooltip) khi người dùng di chuột qua hoặc nhấp vào mục này.-->
+                    <li class="has-dropdown" data-tooltip="tooltip" > 
+                         <a>
+                            <i class="far fa-user-circle"></i> <!-- Điều chỉnh biểu tượng Người dùng -->
+                         </a>
+                      <!--====== Phần đổ xuống khi hover chuột qua biểu tượng ======-->
+                      <span class="js-menu-toggle"></span>
+                      <ul style="width:120px">
+                        <li> <!-- Liên kết đến Trang Dashboard -->
+                          <a href="dashboard.html">
+                            <i class="fas fa-user-circle u-s-m-r-6"></i>
+                            <span>Tài khoản</span>
+                          </a>
+                        </li>
+                        <li> <!--  Liên kết đến Trang Đăng ký -->
+                          <a href="signup.html">
+                            <i class="fas fa-user-plus u-s-m-r-6"></i> <!-- Biểu tượng " người dùng" -->
+                            <span>Đăng ký</span>  <!-- Văn bản hiển thị cho liên kết -->
+                          </a>
+                        </li>
+                        <li> <!--Liên kết đến Trang Đăng nhập -->
+                          <a href="signin.html">
+                            <i class="fas fa-lock u-s-m-r-6"></i>
+                            <span>Đăng nhập</span>
+                          </a>
+                        </li>
+                        <li>  <!-- Liên kết Đăng xuất -->
+                          <a href="signup.html">
+                            <i class="fas fa-lock-open u-s-m-r-6"></i>
+                            <span>Đăng xuất</span>
+                          </a>
+                        </li>
+                      </ul>
+                      <!--====== Kết thúc phần đổ xuống khi hover chuột qua biểu tượng ======-->                  
+                    </li>                   
+                  </ul>
+                  <!--====== Kết thúc danh sách ======-->
+                </div>
+                <!--====== Kết thúc menu ======-->
+              </div>
+              <!--====== Kết thúc thành phần đổ xuống ======-->
+            </div>
+            <!--====== Kết thúc thanh điều hướng chính ======-->
+          </div>
+        </nav>
+        <!--======Kết thúc thanh điều hướng 1 ======-->
+        <!--====== Thanh điều hướng 2 ======-->
+        <nav class="secondary-nav-wrapper">
+          <div class="container">
+            <!--====== Thanh điều hướng phụ ======-->
+            <div class="secondary-nav">
+              <!-- Nút kích hoạt menu -->
+              <div class="menu-init" id="navigation2">
+                <button class="btn btn--icon toggle-button toggle-button--secondary fa fa-bars" type="button"></button>
+                <!--====== Menu ======-->
+                <div class="ah-lg-mode">
+                  <span class="ah-close">✕ Đóng</span>  <!-- Điều chỉnh nút đóng menu -->
+                  <!-- Danh sách menu -->
+                  <ul class="ah-list ah-list--design2 ah-list--link-color-secondary">
+                    <li>
+                        <a href="index.html">TRANG CHỦ</a>  <!-- Dẫn link đến trang chủ -->
+                    </li>
+                    <li class="has-dropdown"> <!-- Dẫn link đến cửa hàng (Có menu đổ xuống) -->
+                      <a href="shop-side-version-2.html">CỬA HÀNG<i class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
+                      <span class="js-menu-toggle"></span>
+                      <ul style="width:170px">  <!-- Menu đổ xuống -->
+                        <li>
+                          <a href="#">Dây chuyền</a>
+                        </li>
+                        <li>
+                          <a href="#">Vòng tay</a>
+                        </li>
+                        <li>
+                          <a href="#">Nhẫn</a>
+                        </li>
+                        <li>
+                          <a href="#">Khuyên tai</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                        <a href="blog-left-sidebar.html">BÀI VIẾT</a> <!-- Dẫn link đến trang bài viết -->
+                    </li>
+                    <li>
+                      <a href="about.html">VỀ CHÚNG TÔI</a> <!-- Dẫn link đến trang Về chúng tôi -->
+                    </li>
+                    <li>
+                      <a href="contact.html">LIÊN HỆ</a><!-- Dẫn link đến trang về trang liên hệ -->
+                    </li>
+                  </ul>
+                  <!--====== Kết thúc danh sách menu ======-->
+                </div>
+                <!--====== Kết thúc menu ======-->
+              </div>
+            <!--====== Kết thúc thanh điều hướng phụ ======-->
+          </div>
+        </nav>
+        <!--====== Kết thúc thanh điều hướng 2 ======-->
+      </header>
+      <!--====== Kết thúc header chính của trang ======-->
+      <!--====== Nội dung trang ======-->
+      <div class="app-content">
+        <!--====== Slider chính ======-->
+        <div class="s-skeleton s-skeleton--h-600 s-skeleton--bg-grey"> <!-- Sử dụng class "s-skeleton" và các kiểu khác nhau để điều chỉnh slider -->
+          <div class="owl-carousel primary-style-1" id="hero-slider">
+            <!--Sử dụng để tạo một carousel bằng thư viện Owl Carousel, với kiểu giao diện được định rõ là "primary-style-1" để điều chỉnh slider-->
+            <div class="hero-slide hero-slide--3">    <!-- Điều chỉnh slide 1 -->
+              <div class="container">  <!-- Điều chỉnh khối chứa nội dung của slide 1 -->
+                <div class="row">  <!-- Dòng chứa các cột -->
+                  <div class="col-xl-6"> <!-- Cột lớn chiếm 6 phần trong 12 phần của dòng -->
+                    <div class="slider-content slider-content--animation">  <!-- Nội dung của slide 1 với hiệu ứng slider-content--animation -->
+                      <!-- Nội dung và hình ảnh cho slide 1 -->
+                      <span class="content-span-3 u-c-secondary" style="font-size: 35px;">Vào ngày 20/12</span> <!-- Điều chỉnh kiểu của thông điệp về sự kiện vào ngày 20/12 -->
+                      <span><img src="https://scontent.fsgn2-7.fna.fbcdn.net/v/t1.15752-9/386447697_324466807224709_8874192364708288682_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=paNFxy1b4tYAX-Yf8sj&_nc_oc=AQmOyfg0ChEg23e9NIk4e6PCR2AakdRgbH_iTVgjE5lvBxVPKxYinSt4JShJJUV7SpQ&_nc_ht=scontent.fsgn2-7.fna&oh=03_AdS20N_ulzaO7vF1owijVkdJ49xJE0Q1QXt7WXvpvZLhEg&oe=65A3A182
+                        " alt="" style="width: 400px;"></span>    <!-- Chỉnh ảnh có chiều rộng là 400px -->              
+                      <span class="content-span-2 u-c-secondary" style="font-size: 40px;">RA MẮT BỘ SƯU TẬP</span> <!-- Điều chỉnh kiểu của đoạn chữ RA MẮT BỘ SƯU TẬP-->
+                      <span class="content-span-4 u-c-secondary"><span class="u-c-brand" style="font-size: 55px;">BE MY LOVE</span> <!-- Điều chỉnh kiểu của đoạn RA MẮT BE MY LOVE-->
+                      </span>
+                      <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html" style="font-size: 25px;">KHÁM PHÁ NGAY</a>  <!-- Điều chỉnh kiểu của đoạn KHÁM PHÁ NGAY-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-slide hero-slide--2"> <!-- Điều chỉnh slide 2, nội dung tương tự slide 1 -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-6">
+                    <div class="slider-content slider-content--animation">
+                      <img src="https://scontent.fsgn2-9.fna.fbcdn.net/v/t1.15752-9/398407516_6926912964055207_4553193293156142557_n.png?_nc_cat=103&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=sYyOw5P6qrYAX_Sm9Be&_nc_ht=scontent.fsgn2-9.fna&oh=03_AdSBwW-kHbFHn_8ir-Frlls7Jh4uwlK42lsxszPxYNqllQ&oe=65A3A366" alt="" style="width: 270px;">
+                      <span class="content-span-1 u-c-secondary" style="font-size: 45px;">TRÒN 1 TUỔI</span>
+                      <span class="content-span-2 u-c-orange" style="font-size:100px;" >SALE</span>
+                      <span class="content-span-4 u-c-secondary" style="font-size: 25px;">upto <span class="u-c-brand"style="font-size: 70px; ">30%</span></span>
+                      <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html" style="font-size: 25px;">MUA NGAY</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-slide hero-slide--1"> <!-- Điều chỉnh slide 3, nội dung tương tự slide 1 -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                   <div class="slider-content slider-content--animation">
+                      <span class="content-span-2 u-c-secondary" style="text-align: center;">MANIS xin chào 2024</span>
+                      <span class="content-span-4 u-c-secondary" style="text-align: center; font-size: 70px;">Giảm Ngay<span class="u-c-brand" style="font-size: 90px;" > 100k</span>
+                      <span class="content-span-3 u-c-secondary">Khi nhập mã<b>"MANISHELLO2024"</b> </span>
+                      <span>(Áp dụng vào ngày 1-2-3/01/2024, cho đơn từ 500k)</span>
+                      </span>
+                      <a class="shop-now-link1 btn--e-brand" href="shop-side-version-2.html" style="font-size: 25px;">XEM SHOP</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+        <!--====== Kết thúc Slider chính ======-->
+        <!--====== Phần 1 ======-->
+        <div class="u-s-p-b-60"> <!-- Phần khoảng cách so với phần bên dưới là 60px -->
+          <!--====== Nội dung phần 1 ======-->
+         <style> /* Chỉnh kiểu*/
+            .custom-margin { /* Tùy chỉnh giá trị margin theo ý muốn của người thiết kế*/
+              margin-left: 30px;
+              margin-right: 30px;
+              margin-top: 20px;}
+            .service { /*Thêm hiêu ứng di chuyển*/
+              overflow: hidden;
+              transition: transform 0.3s ease; /* Thêm transition effect cho transform */}
+              .service:hover {  /*Thêm hiệu ứng khi hover chuột qua*/
+                transform: scale(1.15); /* Phóng to khi hover lên */}
+          </style><!--Kết thúc chỉnh kiểu-->
+          <div class="section__content custom-margin"> <!-- Điều chỉnh phần nội dung về các dịch vụ hoặc ưu đãi -->
+              <div class="row"> <!--Một hàng (row) mới -->
+                <div class="col-lg-3 col-md-6 u-s-m-b-30"> 
+                  <!--Đối với màn hình lớn, chiếm 3/12 (25%) cột. Đối với màn hình trung bình, chiếm 6/12 (50%) cột.
+                  Tùy chỉnh, có thể làm đầu dòng (margin-bottom) có khoảng cách 30px.-->
+                  <div class="service u-h-100"> <!--điều chỉnh hộp hiển thị dịch vụ hoặc ưu đãi.chiều cao của phần tử bằng 100% chiều cao của phần tử cha.-->
+                    <div class="service__icon">  <!-- Điều chỉnh phần tử chứa nội dung của dịch vụ -->
+                      <i class="fas fa-truck"></i>  <!-- Biểu tượng cho xe tải -->
+                    </div>
+                    <div class="service__info-wrap"> <!--Lớp "service__info-wrap," được sử dụng để điều chỉnh container cho thông tin dịch vụ.-->
+                      <span class="service__info-text-1">Miễn phí vận chuyển</span> 
+                      <span class="service__info-text-2"> Đơn hàng từ 600.000 VNĐ </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tương tự, các dịch vụ khác được lặp lại nhưng với thông tin khác nhau -->
+                <div class="col-lg-3 col-md-6 u-s-m-b-30">
+                  <div class="service u-h-100">
+                    <div class="service__icon">
+                      <i class="fas fa-check"></i>
+                    </div>
+                    <div class="service__info-wrap">
+                      <span class="service__info-text-1"> Thanh toán linh hoạt</span>
+                      <span class="service__info-text-2"> Thanh toán bằng nhiều phương thức</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 u-s-m-b-30">
+                  <div class="service u-h-100">
+                    <div class="service__icon">
+                      <i class="fas fa-headphones-alt"></i>
+                    </div>
+                    <div class="service__info-wrap">
+                      <span class="service__info-text-1">Hỗ trợ trực tuyến </span>
+                      <span class="service__info-text-2">Hỗ trợ 24/7</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 u-s-m-b-30">
+                  <div class="service u-h-100">
+                    <div class="service__icon">
+                      <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="service__info-wrap">
+                      <span class="service__info-text-1"> Chương trình giảm giá </span>
+                      <span class="service__info-text-2"> Giảm giá cuối tuần </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+         <!-- Kết thúc điều chỉnh phần nội dung về các dịch vụ hoặc ưu đãi -->
+        </div>
+        <!--====== Kết thúc phần 1======-->
+        <!--====== Phần 2======-->
+        <div class="u-s-p-b-60"> <!-- Phần khoảng cách so với phần bên dưới là 60px -->
+          <!--====== Phần giới thiệu======-->
+          <div class="section__intro u-s-m-b-46"> <!-- Điều chỉnh phần intro với class "section__intro" và margin-bottom là 46px -->
+            <div class="container">  <!-- Điều chỉnh khối chứa nội dung -->
+              <div class="row">  <!--Một hàng (row) mới -->
+                <div class="col-lg-12"> <!-- Một cột lớn chiếm toàn bộ chiều rộng (col-lg-12) -->
+                  <div class="section__text-wrap">
+                    <h1 class="section__heading u-c-secondary u-s-m-b-12">KHUYẾN MÃI HÔM NAY</h1> <!--Điều chỉnh chữ và màu chữ khoản cách giữa các thành phần-->
+                    <span class="section__span u-c-silver">NHANH TAY LÊN!! SỐ LƯỢNG CÓ HẠN!!</span> <!--Điều chỉnh kiểu và mà chữ-->
+                    <span class="section__span u-c-silver">THÊM VÀO GIỎ HÀNG NGAY!!</span> <!--Điều chỉnh kiểu và mà chữ-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--======Kết thúc phần giới thiệu======-->
+          <!--====== Phần nội dung======-->
+          <div class="section__content">
+            <div class="container"><!-- Điều chỉnh khối chứa nội dung -->
+              <div class="row"><!--Một hàng (row) mới -->
+                <div class="col-lg-6 col-md-6 u-s-m-b-30">
+                  <!--cột chiếm 6/12 (hoặc 1/2) chiều rộng trên màn hình lớn (lg) và trung bình (md). 
+                    u-s-m-b-30  tạo khoảng cách dưới (margin-bottom) là 30 px.-->
+                  <div class="product-o product-o--radius product-o--hover-off u-h-100">
+                    <!--Làm cho góc của sản phẩm trở nên bo tròn.Tắt hiệu ứng hover cho sản phẩm. Chiều cao 100%.-->
+                    <div class="product-o__wrap">
+                      <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">   <!-- Liên kết chứa hình ảnh sản phẩm và overlay khuyến mãi -->
+                        <img class="aspect__img" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC002.2.png" alt="">
+                        <!-- Khung overlay cho phần trăm khuyến mãi -->
+                        <div class="discount-overlay"> 
+                          <span class="product-o__discount-percentage">-50%</span>
+                      </div>
+                      </a>
+                      <div class="product-o__special-count-wrap"> <!-- Wrap cho đếm ngược đặc biệt -->
+                        <div class="countdown countdown--style-special" data-countdown="2023/12/21"></div>
+                        <!-- Đếm ngược đặc biệt với dữ liệu ngày đến hạn là "2023/12/21" -->
+                      </div>
+                      <div class="product-o__action-wrap"> <!-- Wrap cho hành động sản phẩm -->
+                        <ul class="product-o__action-list"> <!-- Danh sách hành động sản phẩm -->
+                          <li><!-- Hành động: Xem nhanh -->
+                            <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                              <i class="fas fa-search-plus"></i>
+                            </a>
+                          </li>
+                          <li> <!-- Hành động: Thêm vào giỏ hàng -->
+                            <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng">
+                              <i class="fas fa-plus-circle"></i>
+                            </a>
+                          </li>
+                          <li> <!-- Hành động: Thêm vào mục yêu thích -->
+                            <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                              <i class="fas fa-heart"></i>
+                            </a>
+                          </li>
+                          <li><!-- Hành động: Liên hệ qua email -->
+                            <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ qua email">
+                              <i class="fas fa-envelope"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <span class="product-o__category">  <!-- Danh mục sản phẩm -->
+                      <a href="shop-side-version-2.html">Dây chuyền</a>  <!-- Liên kết đến trang danh mục sản phẩm -->
+                    </span>
+                    <span class="product-o__name"> <!-- Tên sản phẩm -->
+                      <a href="product-detail.html">Dây Chuyền Đá Mặt Trăng</a> <!-- Liên kết đến trang chi tiết sản phẩm -->
+                    </span>
+                    <div class="product-o__rating gl-rating-style"> <!-- Đánh giá sản phẩm -->
+                       <!-- Icon sao đánh giá -->
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <span class="product-o__review">Đã bán 89</span> <!-- Số lượng đã bán -->
+                    </div><!-- Giá sản phẩm -->
+                    <span class="product-o__price">92.500VND <!-- Giá hiện tại --> <span class="product-o__discount">185.000VND<!-- Giảm giá --></span>
+                    </span>
+                  </div>
+                </div>
+                <!--Điều chỉnh tương tự cho các sản phẩm như sản phẩm trên-->
+                <div class="col-lg-6 col-md-6 u-s-m-b-30">
+                  <div class="product-o product-o--radius product-o--hover-off u-h-100">
+                    <div class="product-o__wrap">
+                      <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                        <img class="aspect__img" src="http://manisjewelry.store/wp-content/uploads/2023/11/kt017.1.png" alt="">
+                        <!-- Khung overlay cho phần trăm khuyến mãi -->
+                        <div class="discount-overlay">
+                          <span class="product-o__discount-percentage">-50%</span>
+                        </div>
+                      </a>
+                      <div class="product-o__special-count-wrap">
+                        <div class="countdown countdown--style-special" data-countdown="2023/12/21"></div>
+                      </div>
+                      <div class="product-o__action-wrap">
+                        <ul class="product-o__action-list">
+                          <li>
+                            <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                              <i class="fas fa-search-plus"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng">
+                              <i class="fas fa-plus-circle"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                              <i class="fas fa-heart"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ qua email">
+                              <i class="fas fa-envelope"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <span class="product-o__category">
+                      <a href="shop-side-version-2.html">Khuyên tai</a>
+                    </span>
+                    <span class="product-o__name">
+                      <a href="product-detail.html">Khuyên Tai Daisy Tiny</a>
+                    </span>
+                    <div class="product-o__rating gl-rating-style"> <!-- Đánh giá sản phẩm -->
+                      <!-- Icon sao đánh giá -->
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <span class="product-o__review">Đã bán 99</span>
+                    </div>
+                    <span class="product-o__price">85.000VND <span class="product-o__discount">170.000VND</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--======Kết thúc phần nội dung======-->
+        </div>
+        <!--====== Kết thúc phần 2======-->
+        <!--====== Phần 3 ======-->
+        <div class="u-s-p-b-60">
+          <!--====== Phần giới thiệu======-->
+          <div class="section__intro u-s-m-b-46"> <!-- Điều chỉnh phần intro của trang margin bottom là 46px-->
+            <div class="container"> <!-- Container để giữ nội dung và căn giữa trang -->
+              <div class="row">     <!-- Dòng chia layout thành các cột -->
+                <div class="col-lg-12">  <!-- Cột chiếm toàn bộ chiều rộng trang -->
+                  <div class="section__text-wrap">  <!-- Wrap cho văn bản trong phần intro -->
+                     <!-- Tiêu đề chính điều chỉnh bởi class "section__heading" và màu chữ "u-c-secondary", margin-bottom 12px -->
+                    <h1 class="section__heading u-c-secondary u-s-m-b-12">BỘ SƯU TẬP MỚI</h1>
+                    <!-- Dòng chữ chính điều chỉnh bởi class "section__span", màu chữ "u-c-silver", font-size 35px, và font-family cụ thể -->
+                    <span class="section__span u-c-silver" style="font-size: 35PX; font-family:Verdana, Geneva, Tahoma, sans-serif;">"BE MY LOVE"</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--====== Kết thúc phần giới thiệu ======-->
+          <!--====== Phần nội dung ======-->
+          <div class="section__content">
+            <div class="container">  <!-- Container để giữ nội dung và căn giữa trang -->
+              <div class="slider-fouc"> <!-- slider sử dụng thư viện Owl Carousel -->
+                <div class="owl-carousel product-slider" data-item="4"><!-- Owl Carousel - Sử dụng để hiển thị nhiều sản phẩm ở đây là 4sp-->
+                  <div class="u-s-m-b-30"><!-- Mỗi sản phẩm trong slider margin bottom 30px -->
+                    <div class="product-o product-o--hover-on"> <!--sản phẩm với hiệu ứng hover -->
+                      <div class="product-o__wrap">  <!-- Wrap cho sản phẩm -->
+                        <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">   <!-- Liên kết chứa hình ảnh sản phẩm và overlay khuyến mãi -->
+                          <img class="aspect__img" src="https://media.tiffany.com/is/image/Tiffany/EcomBrowseM/-tiffany-victoriaalternating-graduated-necklace-27568394_993531_ED.jpg?defaultImage=NoImageAvailableInternal&fbclid=IwAR3b0q_l7n2Al4tV1HTkp-BlSOp7tnn5XqvZkXfHivdvWr-MF1tjIzlZM78" alt="">
+                        </a>
+                        <div class="product-o__action-wrap"> <!-- Wrap cho hành động sản phẩm -->
+                          <ul class="product-o__action-list"> <!-- Danh sách hành động sản phẩm -->
+                            <li>       <!-- Hành động: Xem nhanh -->
+                              <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                                <i class="fas fa-search-plus"></i>
+                              </a>
+                            </li>                         
+                            <li><!-- Hành động: Thêm vào mục yêu thích -->
+                              <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                                <i class="fas fa-heart"></i>
+                              </a>
+                            </li>
+                            <li>  <!-- Hành động: Liên hệ đặt trước -->
+                              <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ đặt trước">
+                                <i class="fas fa-envelope"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <span class="product-o__category"> <!-- Danh mục sản phẩm -->
+                        <a href="shop-side-version-2.html">Dây chuyền</a> <!-- Liên kết đến trang danh mục sản phẩm -->
+                      </span>
+                      <span class="product-o__name"> <!-- Tên sản phẩm -->
+                        <a href="product-detail.html">Dây chuyền Eternal Harmony</a> <!-- Liên kết đến trang chi tiết sản phẩm -->
+                      </span>
+                      <div class="product-o__rating gl-rating-style"><!-- Đánh giá sản phẩm -->
+                        <!-- Icon sao đánh giá -->
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="product-o__review">Chưa được bán</span> <!-- Số lượng đã bán -->
+                      </div> <!-- Giá sản phẩm -->
+                      <span class="product-o__price">599.000VND<!-- Giá hiện tại --></span>
+                    </div>
+                  </div>
+                   <!--Điều chỉnh tương tự cho các sản phẩm như sản phẩm trên-->
+                  <div class="u-s-m-b-30">
+                    <div class="product-o product-o--hover-on">
+                      <div class="product-o__wrap">
+                        <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                          <img class="aspect__img" src="https://media.tiffany.com/is/image/Tiffany/EcomBrowseM/-tiffany-lockbangle-70424959_1044787_ED.jpg?defaultImage=NoImageAvailableInternal&fbclid=IwAR3RuS-FB2RXpVaCaxZkkKKk8DSWLutXoMQvc8hh8ZXZZW6J6i1q44s28Z0" alt="">
+                        </a>
+                        <div class="product-o__action-wrap">
+                          <ul class="product-o__action-list">
+                            <li>
+                              <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                                <i class="fas fa-search-plus"></i>
+                              </a>
+                            </li>                            
+                            <li>
+                              <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                                <i class="fas fa-heart"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ đặt trước">
+                                <i class="fas fa-envelope"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <span class="product-o__category">
+                        <a href="shop-side-version-2.html">Vòng tay</a>
+                      </span>
+                      <span class="product-o__name">
+                        <a href="product-detail.html">Vòng tay Enchanting Bliss</a>
+                      </span>
+                      <div class="product-o__rating gl-rating-style">
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="product-o__review">Chưa được bán</span>
+                      </div>
+                      <span class="product-o__price">499.000VND </span>
+                    </div>
+                  </div>
+                   <!--Điều chỉnh tương tự cho các sản phẩm như sản phẩm trên-->
+                  <div class="u-s-m-b-30">
+                    <div class="product-o product-o--hover-on">
+                      <div class="product-o__wrap">
+                        <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                          <img class="aspect__img" src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-victoriamixed-cluster-necklace-35092927_993570_ED.jpg?fbclid=IwAR1PHlK6QlgCXxtY3GwQORspmPfD411-fb2iV88qDbVuKgwMbtL01UBd52E" alt="">
+                        </a>
+                        <div class="product-o__action-wrap">
+                          <ul class="product-o__action-list">
+                            <li>
+                              <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                                <i class="fas fa-search-plus"></i>
+                              </a>
+                            </li>                            
+                            <li>
+                              <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                                <i class="fas fa-heart"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ đặt trước">
+                                <i class="fas fa-envelope"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <span class="product-o__category">
+                        <a href="shop-side-version-2.html">Dây chuyền</a>
+                      </span>
+                      <span class="product-o__name">
+                        <a href="product-detail.html">Dây chuyền Infinite Spark</a>
+                      </span>
+                      <div class="product-o__rating gl-rating-style">
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="product-o__review">Chưa được bán</span>
+                      </div>
+                      <span class="product-o__price">449.000VND</span>
+                    </div>
+                  </div>
+                   <!--Điều chỉnh tương tự cho các sản phẩm như sản phẩm trên-->
+                  <div class="u-s-m-b-30">
+                    <div class="product-o product-o--hover-on">
+                      <div class="product-o__wrap">
+                        <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                          <img class="aspect__img" src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-co-schlumbergersixteen-stone-ring-11715966_1031820_ED.jpg?&op_usm=1.75%2C1.0%2C6.0&%24cropN=0.1%2C0.1%2C0.8%2C0.8&defaultImage=NoImageAvailableInternal&fbclid=IwAR0t6JjQWKWcS2smDK6ZbB5oPoDuN534Hz9WIwpuo6tOZvGMxUCgQvraDik" alt="">
+                        </a>
+                        <div class="product-o__action-wrap">
+                          <ul class="product-o__action-list">
+                            <li>
+                              <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                                <i class="fas fa-search-plus"></i>
+                              </a>
+                            </li>                            
+                            <li>
+                              <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                                <i class="fas fa-heart"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ đặt trước">
+                                <i class="fas fa-envelope"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <span class="product-o__category">
+                        <a href="shop-side-version-2.html">Nhẫn</a>
+                      </span>
+                      <span class="product-o__name">
+                        <a href="product-detail-variable.html">Nhẫn Promise Bond</a>
+                      </span>
+                      <div class="product-o__rating gl-rating-style">
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="product-o__review">Chưa được bán</span>
+                      </div>
+                      <span class="product-o__price">399.000VND</span>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--====== Kết thúc phần nội dung======-->
+        </div>
+        <!--====== Kết thúc phần 3 ======-->
+        <!--====== Phần 4 ======-->
+        <div class="u-s-p-b-60">
+          <!--====== Phần giới thiệu ======-->
+          <div class="section__intro u-s-m-b-16"> <!-- Điều chỉnh phần intro của trang margin bottom là 16px-->
+            <div class="container"> <!-- Container để giữ nội dung và căn giữa trang -->
+              <div class="row"> <!-- Dòng chia layout thành các cột -->
+                <div class="col-lg-12"> <!-- Cột chiếm toàn bộ chiều rộng trang -->
+                  <div class="section__text-wrap"> <!-- Wrap cho văn bản trong phần intro -->
+                    <!-- Tiêu đề chính điều chỉnh bởi class "section__heading" và màu chữ "u-c-secondary", margin-bottom 12px -->
+                    <h1 class="section__heading u-c-secondary u-s-m-b-12">SẢN PHẨM BÁN CHẠY</h1>
+                    <!-- Dòng chữ chính điều chỉnh bởi class "section__span", màu chữ "u-c-silver",-->
+                    <span class="section__span u-c-silver">CÁC SẢN PHẨM ĐƯỢC LỰA CHỌN NHIỀU NHẤT</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--====== Kết thúc phần giới thiệu ======-->
+          <!--====== Phần nội dung======-->
+          <div class="section__content">
+            <div class="container"> <!-- Container để giữ nội dung và căn giữa trang -->
+              <div class="row"> <!-- Dòng chia layout thành các cột -->
+                <div class="col-lg-12"> <!-- Cột chiếm toàn bộ chiều rộng trang -->
+                  <div class="filter-category-container"> <!-- Container chứa các nút lọc danh mục -->
+                    <div class="filter__category-wrapper"> <!-- Wrapper cho nút "TẤT CẢ" -->
+                      <!-- Nút lọc "TẤT CẢ" -->
+                      <button class="btn filter__btn filter__btn--style-1 js-checked" type="button" data-filter="*">TẤT CẢ</button>
+                    </div>
+                    <div class="filter__category-wrapper">  <!-- Wrapper cho nút "DÂY CHUYỀN" -->
+                         <!-- Nút lọc "DÂY CHUYỀN" -->
+                      <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".headphone">DÂY CHUYỀN</button>
+                    </div>
+                    <div class="filter__category-wrapper"> <!-- Wrapper cho nút "VÒNG TAY" -->
+                       <!-- Nút lọc "VÒNG TAY" -->
+                      <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".smartphone">VÒNG TAY</button>
+                    </div>
+                    <div class="filter__category-wrapper"> <!-- Wrapper cho nút "KHUYÊN TAI" -->
+                      <!-- Nút lọc "KHUYÊN TAI" -->
+                      <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".sportgadget">KHUYÊN TAI</button>
+                    </div>
+                    <div class="filter__category-wrapper">  <!-- Wrapper cho nút "NHẪN" -->
+                      <!-- Nút lọc "NHẪN" -->
+                      <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".dslr">NHẪN</button>
+                    </div>
+                  </div>
+                   <!--Điều chỉnh tương tự cho các sản phẩm như sản phẩm trên-->
+                  <div class="filter__grid-wrapper u-s-m-t-30">
+                    <div class="row">
+                      <!-- Cột cho sản phẩm (col-xl-3 - extra-large: 25%, col-lg-4 - large: 33.33%, col-md-6 - medium: 50%, col-sm-6 - small: 50%) , margin bottom:30px-->
+                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item headphone">
+                        <div class="product-o product-o--hover-on product-o--radius">
+                          <div class="product-o__wrap">
+                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                              <img class="aspect__img" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC008.1.png" alt="">
+                              <!-- Khung overlay cho phần trăm khuyến mãi -->
+                              <div class="discount-overlay-2">
+                                <span class="product-o__discount-percentage-2">-24%</span>
+                            </div>
+                            </a>
+                            <div class="product-o__action-wrap">
+                              <ul class="product-o__action-list">
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                                    <i class="fas fa-search-plus"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng">
+                                    <i class="fas fa-plus-circle"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                                    <i class="fas fa-heart"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ qua email">
+                                    <i class="fas fa-envelope"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <span class="product-o__category">
+                            <a href="shop-side-version-2.html">Dây Chuyền</a>
+                          </span>
+                          <span class="product-o__name">
+                            <a href="product-detail.html">Dây Chuyền 925 Bông Tuyết Đính Đá</a>
+                          </span>
+                          <div class="product-o__rating gl-rating-style">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="product-o__review">Đã bán 123</span>
+                          </div>
+                          <span class="product-o__price">135.000VND <span class="product-o__discount">178.000VND</span>
+                          
+                          </span>
+                        </div>
+                      </div>
+                       <!--Điều chỉnh tương tự cho các sản phẩm như sản phẩm trên-->
+                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item headphone">
+                        <div class="product-o product-o--hover-on product-o--radius">
+                          <div class="product-o__wrap">
+                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                              <img class="aspect__img" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC007.2.png" alt="">
+                              <!-- Khung overlay cho phần trăm khuyến mãi -->
+                        <div class="discount-overlay-2">
+                          <span class="product-o__discount-percentage-2">-12%</span>
+                        </div>
+                            </a>
+                            <div class="product-o__action-wrap">
+                              <ul class="product-o__action-list">
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                                    <i class="fas fa-search-plus"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng">
+                                    <i class="fas fa-plus-circle"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                                    <i class="fas fa-heart"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ qua email">
+                                    <i class="fas fa-envelope"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <span class="product-o__category">
+                            <a href="shop-side-version-2.html">Dây Chuyền</a>
+                          </span>
+                          <span class="product-o__name">
+                            <a href="product-detail.html">Dây Chuyền 925 Cánh Thiên Thần Đổi Màu</a>
+                          </span>
+                          <div class="product-o__rating gl-rating-style">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="product-o__review">Đã bán 234</span>
+                          </div>
+                          <span class="product-o__price">185.000VND <span class="product-o__discount">210.000VND</span>
+                          </span>
+                        </div>
+                      </div>
+                       <!--Điều chỉnh tương tự cho các sản phẩm như sản phẩm trên-->
+                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item sportgadget">
+                        <div class="product-o product-o--hover-on product-o--radius">
+                          <div class="product-o__wrap">
+                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                              <img class="aspect__img" src="http://manisjewelry.store/wp-content/uploads/2023/11/KT003.1.png" alt="">
+                              <!-- Khung overlay cho phần trăm khuyến mãi -->
+                        <div class="discount-overlay-2">
+                          <span class="product-o__discount-percentage-2">-18%</span>
+                        </div>
+                            </a>
+                            <div class="product-o__action-wrap">
+                              <ul class="product-o__action-list">
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                                    <i class="fas fa-search-plus"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng">
+                                    <i class="fas fa-plus-circle"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                                    <i class="fas fa-heart"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ qua email">
+                                    <i class="fas fa-envelope"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <span class="product-o__category">
+                            <a href="shop-side-version-2.html">Khuyên Tai</a>
+                          </span>
+                          <span class="product-o__name">
+                            <a href="product-detail.html">Khuyên Tai Bạc 925 Hoa 5 Cánh Đá</a>
+                          </span>
+                          <div class="product-o__rating gl-rating-style">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="product-o__review">Đã bán 251</span>
+                          </div>
+                          <span class="product-o__price">123.000VND <span class="product-o__discount">149.000VND</span>
+                          </span>
+                        </div>
+                      </div>
+                       <!--Điều chỉnh tương tự cho các sản phẩm như sản phẩm trên-->
+                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item sportgadget">
+                        <div class="product-o product-o--hover-on product-o--radius">
+                          <div class="product-o__wrap">
+                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                              <img class="aspect__img" src="http://manisjewelry.store/wp-content/uploads/2023/11/Thiet-ke-chua-co-ten-21.png" alt="">
+                              <!-- Khung overlay cho phần trăm khuyến mãi -->
+                        <div class="discount-overlay-2">
+                          <span class="product-o__discount-percentage-2">-25%</span>
+                        </div>
+                            </a>
+                            <div class="product-o__action-wrap">
+                              <ul class="product-o__action-list">
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                                    <i class="fas fa-search-plus"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng">
+                                    <i class="fas fa-plus-circle"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                                    <i class="fas fa-heart"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ qua email">
+                                    <i class="fas fa-envelope"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <span class="product-o__category">
+                            <a href="shop-side-version-2.html">Khuyên Tai</a>
+                          </span>
+                          <span class="product-o__name">
+                            <a href="product-detail.html">Khuyên Tai Bạc 925 Cỏ 4 Lá Đính Đá</a>
+                          </span>
+                          <div class="product-o__rating gl-rating-style">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="product-o__review">Đã bán 278</span>
+                          </div>
+                          <span class="product-o__price">125.000VND <span class="product-o__discount">165.000VND</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!--Điều chỉnh tương tự cho các sản phẩm như sản phẩm trên-->
+                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item dslr">
+                        <div class="product-o product-o--hover-on product-o--radius">
+                          <div class="product-o__wrap">
+                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                              <img class="aspect__img" src="http://manisjewelry.store/wp-content/uploads/2023/11/sp2.4.png" alt="">
+                              <!-- Khung overlay cho phần trăm khuyến mãi -->
+                        <div class="discount-overlay-2">
+                          <span class="product-o__discount-percentage-2">-19%</span>
+                        </div>
+                            </a>
+                            <div class="product-o__action-wrap">
+                              <ul class="product-o__action-list">
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                                    <i class="fas fa-search-plus"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng">
+                                    <i class="fas fa-plus-circle"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                                    <i class="fas fa-heart"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ qua email">
+                                    <i class="fas fa-envelope"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <span class="product-o__category">
+                            <a href="shop-side-version-2.html">Nhẫn</a>
+                          </span>
+                          <span class="product-o__name">
+                            <a href="product-detail.html">Nhẫn Bạc Trơn Biểu Tượng Vô Cực Cá Tính</a>
+                          </span>
+                          <div class="product-o__rating gl-rating-style">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="product-o__review">Đã bán 249</span>
+                          </div>
+                          <span class="product-o__price">105.000VND <span class="product-o__discount">129.000VND</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!--Điều chỉnh tương tự cho các sản phẩm như sản phẩm trên-->
+                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item dslr">
+                        <div class="product-o product-o--hover-on product-o--radius">
+                          <div class="product-o__wrap">
+                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                              <img class="aspect__img" src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt="">
+                              <!-- Khung overlay cho phần trăm khuyến mãi -->
+                        <div class="discount-overlay-2">
+                          <span class="product-o__discount-percentage-2">-37%</span>
+                        </div>
+                            </a>
+                            <div class="product-o__action-wrap">
+                              <ul class="product-o__action-list">
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                                    <i class="fas fa-search-plus"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng">
+                                    <i class="fas fa-plus-circle"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                                    <i class="fas fa-heart"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ qua email">
+                                    <i class="fas fa-envelope"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <span class="product-o__category">
+                            <a href="shop-side-version-2.html">Nhẫn</a>
+                          </span>
+                          <span class="product-o__name">
+                            <a href="product-detail.html">Nhẫn Bạc Trơn Tròn Hở, Basic Xinh Xắn</a>
+                          </span>
+                          <div class="product-o__rating gl-rating-style">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="product-o__review">Đã bán 301</span>
+                          </div>
+                          <span class="product-o__price">100.000VND <span class="product-o__discount">160.000VND</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!--Điều chỉnh tương tự cho các sản phẩm như sản phẩm trên-->
+                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item smartphone">
+                        <div class="product-o product-o--hover-on product-o--radius">
+                          <div class="product-o__wrap">
+                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                              <img class="aspect__img" src="http://manisjewelry.store/wp-content/uploads/2023/11/VT014.3.png" alt="">
+                              <!-- Khung overlay cho phần trăm khuyến mãi -->
+                        <div class="discount-overlay-2">
+                          <span class="product-o__discount-percentage-2">-20%</span>
+                        </div>
+                            </a>
+                            <div class="product-o__action-wrap">
+                              <ul class="product-o__action-list">
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                                    <i class="fas fa-search-plus"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng">
+                                    <i class="fas fa-plus-circle"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                                    <i class="fas fa-heart"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ qua email">
+                                    <i class="fas fa-envelope"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <span class="product-o__category">
+                            <a href="shop-side-version-2.html">Vòng Tay</a>
+                          </span>
+                          <span class="product-o__name">
+                            <a href="product-detail.html">Vòng Tay Bạc 925 Hình Mặt Trăng, Ngôi Sao</a>
+                          </span>
+                          <div class="product-o__rating gl-rating-style">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="product-o__review">Đã bán 241</span>
+                          </div>
+                          <span class="product-o__price">165.000VND <span class="product-o__discount">205.000VND</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!--Điều chỉnh tương tự cho các sản phẩm như sản phẩm trên-->
+                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item smartphone">
+                        <div class="product-o product-o--hover-on product-o--radius">
+                          <div class="product-o__wrap">
+                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                              <img class="aspect__img" src="http://manisjewelry.store/wp-content/uploads/2023/11/VT003.1.png" alt="">
+                              <!-- Khung overlay cho phần trăm khuyến mãi -->
+                        <div class="discount-overlay-2">
+                          <span class="product-o__discount-percentage-2">-37%</span>
+                        </div>
+                            </a>
+                            <div class="product-o__action-wrap">
+                              <ul class="product-o__action-list">
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh">
+                                    <i class="fas fa-search-plus"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng">
+                                    <i class="fas fa-plus-circle"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào mục yêu thích">
+                                    <i class="fas fa-heart"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Liên hệ qua email">
+                                    <i class="fas fa-envelope"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <span class="product-o__category">
+                            <a href="shop-side-version-2.html">Vòng Tay</a>
+                          </span>
+                          <span class="product-o__name">
+                            <a href="product-detail.html">Vòng Tay Bạc 925 Hồ điệp Đá Đa Sắc</a>
+                          </span>
+                          <div class="product-o__rating gl-rating-style">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="product-o__review">Đã bán 239</span>
+                          </div>
+                          <span class="product-o__price">105.000VND <span class="product-o__discount">167.000VND</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Tạo bút xem thêm trang web-->
+                <div class="col-lg-12"> <!-- Cột chiếm toàn bộ chiều rộng khi màn hình là large (col-lg-12) -->
+                  <div class="load-more">
+                    <!-- Nút "Xem Thêm" điều chỉnh bởi class btn--e-brand -->
+                    <button class="btn btn--e-brand" id="load-more-btn">XEM THÊM</button>
+                    <script>  //Mã JavaScript để điều hướng khi nút "Xem Thêm" được nhấp 
+                      document.getElementById('load-more-btn').addEventListener('click', function() {
+                        window.location.href = 'shop-side-version-2.html';
+                        // Khi nút được nhấp, chuyển hướng đến trang 'shop-side-version-2.html'
+                      });
+                    </script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--====== Kết thúc phần nội dung======-->
+        </div>
+        <!--====== Kết thúc phần 4======-->
+       <!--====== Phần 5 ======-->
+        <div class="banner-bg">
+          <!--====== Phần nội dung======-->
+          <div class="section__content">
+            <div class="container">
+              <div class="row"> <!-- Dòng chia layout thành các cột -->
+                <div class="col-lg-12"> <!-- Cột chiếm toàn bộ chiều rộng khi màn hình là large -->
+                  <div class="banner-bg__countdown"> <!-- Phần banner với đồng hồ đếm ngược -->
+                    <div class="countdown countdown--style-banner" data-countdown="2023/12/25"></div> <!-- Đồng hồ đếm ngược có kiểu dáng của banner -->
+                  </div>
+                  <div class="banner-bg__wrap"> <!-- Phần wrap chứa nội dung của banner -->
+                    <!-- Phần văn bản 1 của banner -->
+                    <div class="banner-bg__text-1">
+                      <span class="u-c-white">Mua 1</span>
+                      <span class="u-c-secondary">Được 4</span>
+                    </div>
+                    <!-- Phần văn bản 2 của banner -->
+                    <div class="banner-bg__text-2">
+                      <span class="u-c-secondary">Số lượng có hạn</span>
+                      <span class="u-c-white">Đừng bỏ lỡ!</span>
+                    </div>
+                    <!-- Nút "Tìm hiểu thêm" với kiểu màu chính (secondary) của trang -->
+                    <a class="banner-bg__shop-now btn--e-secondary" href="shop-side-version-2.html">Tìm hiểu thêm</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--====== Kết thúc phần nội dung ======-->
+        </div>
+        <!--====== Kết thúc phần 5 ======-->
+        <!--====== Phần 6 ======-->
+        <div class="u-s-p-b-60">
+          <!--====== Phần giới thiệu ======-->
+          <div class="section__intro u-s-m-b-46">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="section__text-wrap">
+                    <h1 class="section__heading u-c-secondary u-s-m-b-12">BÀI VIẾT GẦN ĐÂY</h1> <!-- Tiêu đề của phần -->
+                    <!-- Mô tả hoặc thông điệp phụ của phần -->
+                    <span class="section__span u-c-silver">BẮT ĐẦU NGÀY MỚI CỦA MÌNH CÙNG NHỮNG TIN TỨC THÚ VỊ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--====== Kết thúc phần giới thiệu ======-->
+          <!--====== Phần nội dung ======-->
+          <div class="section__content">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 u-s-m-b-30"> <!--Cột chiếm 4/12 (1/3) chiều rộng trên màn hình lớn và 6/12 (1/2) trên màn hình medium, margin bottom:30px-->
+                  <div class="bp-mini bp-mini--img u-h-100"> <!--đặt chiều cao của phần tử là 100% chiều cao của phần tử cha của nó-->
+                    <!-- Phần hình ảnh đại diện cho bài viết -->
+                    <div class="bp-mini__thumbnail">
+                      <!--====== Chỉnh ảnh ======-->
+                      <a class="aspect aspect--bg-grey aspect--1366-768 u-d-block" href="blog-detail.html"> <!--định dạng kiểu dáng và tỷ lệ khung hình.-->
+                        <img class="aspect__img" src="images/blog/post1.png" alt="">
+                      </a>
+                      <!--====== Kết thúc chỉnh ảnh ======-->
+                    </div>
+                     <!-- Phần nội dung chi tiết của bài viết -->
+                    <div class="bp-mini__content"> 
+                      <div class="bp-mini__stat"><!--Phần thống kê thông tin về bài viết.-->
+                        <span class="bp-mini__stat-wrap">
+                          <span class="bp-mini__publish-date">
+                            <a> <!-- Ngày đăng bài viết -->
+                              <span>29 tháng 11 2023</span>
+                            </a>
+                          </span>
+                        </span>
+                        <span class="bp-mini__stat-wrap">
+                          <span class="bp-mini__author">
+                             <!-- Tác giả bài viết -->
+                            <a href="#">Trà My</a>
+                          </span>
+                        </span>
+                        <span class="bp-mini__stat">
+                          <span class="bp-mini__comment">
+                            <a href="blog-detail.html">
+                              <!-- Số lượng bình luận -->
+                              <i class="far fa-comments u-s-m-r-4"></i>
+                              <span>3</span>
+                            </a>
+                          </span>
+                        </span>
+                      </div>
+                      <span class="bp-mini__h1"> <!-- Tiêu đề của bài viết -->
+                        <a href="blog-detail.html">Bật mí trang sức phù hợp cho cung Thiên Bình</a>
+                      </span> <!-- Mô tả ngắn của bài viết -->
+                      <p class="bp-mini__p">Cô gái thuộc cung Thiên Bình là những người yêu cái đẹp và tìm kiếm sự hoàn hảo, chỉn chu. </p>
+                      <div class="blog-t-w"> <!-- Thẻ chứa các thẻ tag của bài viết -->
+                        <a class="gl-tag btn--e-transparent-hover-brand-b-2">Thiên Bình</a>
+                        <a class="gl-tag btn--e-transparent-hover-brand-b-2">Phong cách</a>
+                        <a class="gl-tag btn--e-transparent-hover-brand-b-2">Màu sắc</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Điều chỉnh tương tự bài viết ở trên-->
+                <div class="col-lg-4 col-md-6 u-s-m-b-30">
+                  <div class="bp-mini bp-mini--img u-h-100">
+                    <div class="bp-mini__thumbnail">
+                      <!--====== Chỉnh ảnh ======-->
+                      <a class="aspect aspect--bg-grey aspect--1366-768 u-d-block" href="blog-detail.html">
+                        <img class="aspect__img" src="images/blog/post2-1.png" alt="">
+                      </a>
+                      <!--====== Kết thúc chỉnh ảnh ======-->
+                    </div>
+                    <div class="bp-mini__content">
+                      <div class="bp-mini__stat">
+                        <span class="bp-mini__stat-wrap">
+                          <span class="bp-mini__publish-date">
+                            <a>
+                              <span>28 tháng 11 2023</span>
+                            </a>
+                          </span>
+                        </span>
+                        <span class="bp-mini__stat-wrap">
+                          <span class="bp-mini__author">
+                            <a href="#">Trà My</a>
+                          </span>
+                        </span>
+                        <span class="bp-mini__stat">
+                          <span class="bp-mini__comment">
+                            <a href="blog-detail.html">
+                              <i class="far fa-comments u-s-m-r-4"></i>
+                              <span>0</span>
+                            </a>
+                          </span>
+                        </span>
+                      </div>
+                      <span class="bp-mini__h1">
+                        <a href="blog-detail.html">Bí quyết đeo trang sức vàng hiện đại và hợp mốt</a>
+                      </span>
+                      <p class="bp-mini__p">Vẻ đẹp sang trọng, quý phái của trang sức vàng luôn khiến các tín đồ yêu trang sức say mê.</p>
+                      <div class="blog-t-w">
+                        <a class="gl-tag btn--e-transparent-hover-brand-b-2">Vàng</a>
+                        <a class="gl-tag btn--e-transparent-hover-brand-b-2">Hiện đại</a>
+                        <a class="gl-tag btn--e-transparent-hover-brand-b-2">Mốt</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 <!--Điều chỉnh tương tự bài viết ở trên-->
+                <div class="col-lg-4 col-md-6 u-s-m-b-30">
+                  <div class="bp-mini bp-mini--img u-h-100">
+                    <div class="bp-mini__thumbnail">
+                      <!--====== Chỉnh ảnh ======-->
+                      <a class="aspect aspect--bg-grey aspect--1366-768 u-d-block" href="blog-detail.html">
+                        <img class="aspect__img" src="images/blog/post3.png" alt="">
+                      </a>
+                      <!--====== Kết thúc chỉnh ảnh ======-->
+                    </div>
+                    <div class="bp-mini__content">
+                      <div class="bp-mini__stat">
+                        <span class="bp-mini__stat-wrap">
+                          <span class="bp-mini__publish-date">
+                            <a>
+                              <span>22 tháng 6 2023</span>
+                            </a>
+                          </span>
+                        </span>
+                        <span class="bp-mini__stat-wrap">
+                          <span class="bp-mini__author">
+                            <a href="#">Tấn Duy</a>
+                          </span>
+                        </span>
+                        <span class="bp-mini__stat">
+                          <span class="bp-mini__comment">
+                            <a href="blog-detail.html">
+                              <i class="far fa-comments u-s-m-r-4"></i>
+                              <span>0</span>
+                            </a>
+                          </span>
+                        </span>
+                      </div>
+                      <span class="bp-mini__h1">
+                        <a href="blog-detail.html">Xu hướng trang sức cao cấp mùa hè ấn tượng cho phái đẹp</a>
+                      </span>
+                      <p class="bp-mini__p">Hòa nhịp không khí trong sự trở lại của một mùa hè rực rỡ đầy cảm hứng.</p>
+                      <div class="blog-t-w">
+                        <a class="gl-tag btn--e-transparent-hover-brand-b-2">Phái đẹp</a>
+                        <a class="gl-tag btn--e-transparent-hover-brand-b-2">Mùa hè</a>
+                        <a class="gl-tag btn--e-transparent-hover-brand-b-2">Trang sức</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--====== Kết thúc phần nội dung======-->
+        </div>
+        <!--======Kết thúc phần 6 ======-->
+        <!--====== Phần 7 ======-->
+        <div class="u-s-p-b-90 u-s-m-b-30">
+          <!--====== Phần giới thiệu ======-->
+          <div class="section__intro u-s-m-b-46">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="section__text-wrap">
+                    <h1 class="section__heading u-c-secondary u-s-m-b-12">ĐÁNH GIÁ CỦA KHÁCH HÀNG</h1>
+                    <span class="section__span u-c-silver">KHÁCH HÀNG NÓI GÌ VỀ MANIS?</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--====== Kết thúc phần giới thiệu ======-->
+          <!--====== Phần nội dung ======-->
+          <div class="section__content">
+            <div class="container">
+              <!--====== Đanh giá của khách hàng ======-->
+              <div class="slider-fouc">
+                <div class="owl-carousel" id="testimonial-slider">
+                  <!--Đánh giá thứ 1-->
+                  <div class="testimonial">
+                     <!-- Phần hình ảnh của người đánh giá -->
+                    <div class="testimonial__img-wrap">
+                      <!-- Phần nội dung của đánh giá -->
+                      <img class="testimonial__img" src="https://i.pinimg.com/236x/9a/e5/fc/9ae5fcd0a11136a31fea6343e4938752.jpg" alt="">
+                    </div>
+                    <div class="testimonial__content-wrap">
+                      <!-- Phần xếp hạng sao của sản phẩm hoặc dịch vụ -->
+                      <div class="product-o__rating gl-rating-style">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                       <!-- Phần trích dẫn văn bản đánh giá -->
+                      <blockquote class="testimonial__block-quote"> <!--Đánh dấu đoạn văn bản là trích dẫn-->
+                        <p>"Nhân viên tư vấn nhiệt tình, hết lòng hỗ trợ khách hàng, sản phẩm nhận được tinh xảo và còn được tặng kèm quà. Tôi nhất định sẽ giới thiệu MANIS cho bạn bè và người thân của mình."</p>
+                      </blockquote>
+                      <!-- Tên của người đánh giá -->
+                      <span class="testimonial__author">Nhu Mỹ</span>
+                    </div>
+                  </div>
+                  <!--Đánh giá thứ 2, điều chỉnh như đánh giá 1-->
+                  <div class="testimonial">
+                    <div class="testimonial__img-wrap">
+                      <img class="testimonial__img" src="https://i.pinimg.com/236x/89/34/fb/8934fb9cf0bfaf998ffe10bae3457ba1.jpg" alt="">
+                    </div>
+                    <div class="testimonial__content-wrap">
+                      <div class="product-o__rating gl-rating-style">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <blockquote class="testimonial__block-quote">
+                        <p>"Nhẫn mình mua bên MANIS bị lỗi và shop rất nhiệt tình hỗ trợ đổi trả lại còn không mất phí ship nữa. Dịch vụ chăm sóc khách hàng quá tuyệt vời và mình chắc chắn sẽ ủng hộ shop lâu dài."</p>
+                      </blockquote>
+                      <span class="testimonial__author">Hồng Hạnh</span>
+                    </div>
+                  </div>
+                   <!--Đánh giá thứ 3, điều chỉnh như đánh giá 1-->
+                  <div class="testimonial">
+                    <div class="testimonial__img-wrap">
+                      <img class="testimonial__img" src="https://i.pinimg.com/564x/04/1e/9f/041e9f037e7eaa655a1b050ce44e4444.jpg" alt="">
+                    </div>
+                    <div class="testimonial__content-wrap">
+                      <div class="product-o__rating gl-rating-style">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <blockquote class="testimonial__block-quote">
+                        <p>"Tôi mua dây chuyền của MANIS để làm quà sinh nhật và shop có hỗ trợ gói quà cũng như ghi thiệp cho tôi. Shop gói rất đẹp, sản phẩm đúng như mô tả và bạn tôi rất vui khi nhận được món quà này."</p>
+                      </blockquote>
+                      <span class="testimonial__author">Trà My</span>
+                    </div>
+                  </div>
+                   <!--Đánh giá thứ 4, điều chỉnh như đánh giá 1-->
+                  <div class="testimonial">
+                    <div class="testimonial__img-wrap">
+                      <img class="testimonial__img" src="https://media.doisongphapluat.com/media/pham-nhu-quynh/2023/10/26/trang-phap-16.jpg" alt="">
+                    </div>
+                    <div class="testimonial__content-wrap">
+                      <div class="product-o__rating gl-rating-style">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <blockquote class="testimonial__block-quote">
+                        <p>"Sản phẩm gia công các chi tiết rất tinh xảo, được tặng kèm quà tặng và tôi hài lòng với số tiền mình bỏ ra."</p>
+                      </blockquote>
+                      <span class="testimonial__author">Tấn Duy</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--====== Kết thúc phần đánh giá ======-->
+            </div>
+          </div>
+          <!--====== Kết thúc phần nội dung ======-->
+        </div>
+        <!--====== Kết thúc phần 7 ======-->
+        <!--====== Kết thúc phần nội dung ======-->
+        <!--====== Phần chân trang ======-->
+                <footer>
+          <div class="outer-footer"> <!--Điều chỉnh chân trang-->
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 col-md-6"> <!--kích thước 4/12 trên màn hình lớn (lg) và 6/12 trên màn hình trung bình (md).-->
+                  <div class="outer-footer__content u-s-m-b-40">
+                    <span class="outer-footer__content-title">Liên hệ</span>
+                    <div class="outer-footer__text-wrap">
+                      <i class="fas fa-home"></i> <!--Biểu tượng nhà-->
+                      <span>279 Nguyễn Tri Phương, Phường 5, Quận 5</span>
+                    </div>
+                    <div class="outer-footer__text-wrap">
+                      <i class="fas fa-phone-volume"></i> <!--Biểu tượng điện thoại.-->
+                      <span>(+84) 939 326 930</span>
+                    </div>
+                    <div class="outer-footer__text-wrap">
+                      <i class="far fa-envelope"></i> <!--Biểu tượng email.-->
+                      <span>manis@manisjewelry.store</span>
+                    </div>
+                    <div class="outer-footer__social">
+                      <ul>
+                        <li>
+                          <a class="s-fb--color-hover" href="#">
+                            <i class="fab fa-facebook-f"></i> <!--Biểu tượng facebook.-->
+                          </a>
+                        </li>
+                        <li>
+                          <a class="s-insta--color-hover" href="#">
+                            <i class="fab fa-instagram"></i> <!--Biểu tượng instagram.-->
+                          </a>
+                        </li>
+                        <li>
+                          <a class="s-gplus--color-hover" href="#">
+                            <i class="fab fa-google-plus-g"></i><!--Biểu tượng google.-->
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!--Chỉnh như phần chân trang phía trên-->
+                <div class="col-lg-4 col-md-6">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                      <div class="outer-footer__content u-s-m-b-40">
+                        <span class="outer-footer__content-title">Thông tin</span>
+                        <div class="outer-footer__list-wrap">
+                          <ul>
+                            <li>
+                              <a href="cart.html">Giỏ hàng</a>
+                            </li>
+                            <li>
+                              <a href="dash-payment-option.html">Thanh toán</a>
+                            </li>
+                            <li>
+                              <a href="dashboard.html">Tài khoản</a>
+                            </li>                                                    
+                            <li>
+                              <a href="shop-side-version-2.html">Cửa hàng</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                      <div class="outer-footer__content u-s-m-b-40">
+                        <div class="outer-footer__list-wrap">
+                          <span class="outer-footer__content-title">Manis Jewelry</span>
+                          <ul>
+                            <li>
+                              <a href="about.html">Về chúng tôi</a>
+                            </li>
+                            <li>
+                              <a href="contact.html">Bản đồ</a>
+                            </li>
+                            <li>
+                              <a href="dash-my-order.html">Giao hàng</a>
+                            </li>
+                            <li>
+                              <a href="shop-side-version-2.html">Cửa hàng vật lý</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Footer đăng kí nhận thông tin -->
+                <div class="col-lg-4 col-md-12"> <!--kích thước 4/12 trên màn hình lớn (lg) và 1/12 trên màn hình trung bình (md).-->
+                  <div class="outer-footer__content">
+                    <span class="outer-footer__content-title">Đăng ký nhận thông tin</span>
+                    <form class="newsletter">
+                      <div class="newsletter__group">
+                        <label for="newsletter"></label>
+                        <input class="input-text input-text--only-white" type="text" id="newsletter" placeholder="Nhập Email của bạn">
+                        <button class="btn btn--e-brand newsletter__btn" type="submit">ĐĂNG KÝ</button>
+                      </div>
+                      <span class="newsletter__text">Đăng ký để nhận thông tin về các chương trình khuyến mãi, quà tặng, các vouchers và các coupon.</span>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!--====== Kết thúc ======-->
+        <!--====== Xem nhanh ======-->
+        <div class="modal fade" id="quick-look">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content modal--shadow">
+
+                  <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
+                  <div class="modal-body">
+                      <div class="row">
+                          <div class="col-lg-5">
+
+                              <!--====== Điều chỉnh đường dẫn ======-->
+                              <div class="pd-breadcrumb u-s-m-b-30">
+                                  <ul class="pd-breadcrumb__list">
+                                      <li class="has-separator">
+
+                                          <a href="index.hml">Trang chủ</a></li>
+                                      
+                                      <li class="is-marked">
+
+                                          <a href="shop-side-version-2.html">Dây chuyền</a></li>
+                                  </ul>
+                              </div>
+                              <!--====== Kết thúc điều chỉnh đường dẫn ======-->
+
+
+                               <!--====== Chi tiết sản phẩm ======-->
+                              <div class="pd u-s-m-b-30">
+                                  <div class="pd-wrap">
+                                      <div id="js-product-detail-modal">
+                                          <div>
+
+                                              <img class="u-img-fluid" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC008.png" alt=""></div>
+                                          <div>
+
+                                              <img class="u-img-fluid" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC008.1.png" alt=""></div>
+                                          <div>
+
+                                              <img class="u-img-fluid" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC008.2.png" alt=""></div>
+                                          
+                                      </div>
+                                  </div>
+                                  <div class="u-s-m-t-15">
+                                      <div id="js-product-detail-modal-thumbnail">
+                                          <div>
+
+                                              <img class="u-img-fluid" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC008.png" alt=""></div>
+                                          <div>
+
+                                              <img class="u-img-fluid" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC008.1.png" alt=""></div>
+                                          <div>
+
+                                              <img class="u-img-fluid" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC008.2.png" alt=""></div>
+                                          
+                                      </div>
+                                  </div>
+                              </div>
+                              <!--====== Kết thúc chi tiết sản phẩm ======-->
+                          </div>
+                          <div class="col-lg-7">
+
+                              <!--====== Chi tiết sp mặt bên phải ======-->
+                              <div class="pd-detail">
+                                  <div>
+
+                                      <span class="pd-detail__name">Dây chuyền 925 Mặt Bông Tuyết</span></div>
+                                  <div>
+                                      <div class="pd-detail__inline">
+
+                                          <span class="pd-detail__price">145.000VND</span>
+
+                                          <span class="pd-detail__discount">(GIẢM 17%)</span><del class="pd-detail__del">175.000VND</del></div>
+                                  </div>
+                                  <div class="u-s-m-b-15">
+                                      <div class="pd-detail__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                          <span class="pd-detail__review u-s-m-l-4">
+
+                                              <a href="product-detail.html">150 đánh giá</a></span></div>
+                                  </div>
+                                  <div class="u-s-m-b-15">
+                                      <div class="pd-detail__inline">
+                                          <span class="pd-detail__left">Chỉ còn 3 sản phẩm</span></div>
+                                  </div>
+                                  <div class="u-s-m-b-15">
+
+                                      <span class="pd-detail__preview-desc">Chất liệu: Bạc S925 (92,5% Bạc và 7,5% kim loại khác sản xuất theo công nghệ Bạc Ý), hàng gia công kĩ bóng đẹp, không han gỉ, không dị ứng, dễ làm sáng và bảo quản.</span></div>
+                                  <div class="u-s-m-b-15">
+                                      <div class="pd-detail__inline">
+
+                                          <span class="pd-detail__click-wrap"><i class="far fa-heart u-s-m-r-6"></i>
+
+                                              <a href="signin.html">Thêm vào mục yêu thích</a>
+
+                                              <span class="pd-detail__click-count">(102)</span></span></div>
+                                  </div>
+                                  <div class="u-s-m-b-15">
+                                      <div class="pd-detail__inline">
+
+                                          <span class="pd-detail__click-wrap"><i class="far fa-envelope u-s-m-r-6"></i>
+
+                                              <a href="signin.html">Nhận thông báo khi có ưu đãi</a>
+
+                                              <span class="pd-detail__click-count">(20)</span></span></div>
+                                  </div>
+                                  <div class="u-s-m-b-15">
+                                      <ul class="pd-social-list">
+                                          <li>
+
+                                              <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
+
+                                          <li>
+
+                                              <a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a></li>
+                                          <li>
+
+                                              <a class="s-wa--color-hover" href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                          <li>
+
+                                              <a class="s-gplus--color-hover" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                      </ul>
+                                  </div>
+                                  <div class="u-s-m-b-15">
+                                      <form class="pd-detail__form">
+                                          <div class="pd-detail-inline-2">
+                                              <div class="u-s-m-b-15">
+
+                                                  <!--====== Nhập số lượng sản phẩm ======-->
+                                                  <div class="input-counter">
+
+                                                      <span class="input-counter__minus fas fa-minus"></span>
+
+                                                      <input class="input-counter__text input-counter--text-primary-style" type="text" value="1" data-min="1" data-max="1000">
+
+                                                      <span class="input-counter__plus fas fa-plus"></span></div>
+                                                  <!--====== Kết thục nhập số lượng sản phẩm ======-->
+                                              </div>
+                                              <div class="u-s-m-b-15">
+
+                                                  <button class="btn btn--e-brand-b-2" type="submit">Thêm vào giỏ hàng</button></div>
+                                          </div>
+                                      </form>
+                                  </div>
+                                  <div class="u-s-m-b-15">
+
+                                      <span class="pd-detail__label u-s-m-b-8">Chính sách sản phẩm</span>
+                                      <ul class="pd-detail__policy-list">
+                                          <li><i class="fas fa-check-circle u-s-m-r-8"></i>
+
+                                              <span>1 đổi 1 trong vòng 7 ngày</span></li>
+                                          <li><i class="fas fa-check-circle u-s-m-r-8"></i>
+
+                                              <span>Hoàn tiền 100%</span></li>
+                                          <li><i class="fas fa-check-circle u-s-m-r-8"></i>
+
+                                              <span>Cam kết sản phẩm đúng như mô tả</span></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <!--====== Kết thúc chi tiết sp mặt bên phải ======-->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--======Kết thúc phần xem nhanh ======-->
+         <!--====== Pop up thêm vào giỏ hàng ======-->
+         <div class="modal fade" id="add-to-cart">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content modal-radius modal-shadow">
+
+                  <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
+                  <div class="modal-body">
+                      <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                              <div class="success u-s-m-b-30">
+                                  <div class="success__text-wrap"><i class="fas fa-check"></i>
+
+                                      <span>Sản phẩm đã được thêm vào giỏ hàng!</span></div>
+                                  <div class="success__img-wrap">
+
+                                      <img class="u-img-fluid" src="http://manisjewelry.store/wp-content/uploads/2023/11/DC019.1.png" alt=""></div>
+                                  <div class="success__info-wrap">
+
+                                      <span class="success__name">Bộ Sản Phẩm Bạc 925 Hồ Điệp Đa Sắc</span>
+
+                                      <span class="success__quantity">Số lượng: 1</span>
+
+                                      <span class="success__price">258.000VND</span></div>
+                              </div>
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <div class="s-option">
+
+                                  <span class="s-option__text">1 sản phẩm trong giỏ hàng</span>
+                                  <div class="s-option__link-box">
+
+                                      <a class="s-option__link btn--e-white-brand-shadow" data-dismiss="modal">TIẾP TỤC MUA SẮM</a>
+
+                                      <a class="s-option__link btn--e-white-brand-shadow" href="cart.html">XEM GIỎ HÀNG</a>
+
+                                      <a class="s-option__link btn--e-brand-shadow" href="checkout.html">THANH TOÁN</a></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--====== Kết thúc popup thêm vào giỏ hàng ======-->
+        <!--====== Popup đăng kí nhận ưu đãi ======-->
+        <div class="modal fade new-l" id="newsletter-modal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal--shadow">
+              <button class="btn new-l__dismiss fas fa-times" type="button" data-dismiss="modal"></button>
+              <div class="modal-body">
+                <div class="row u-s-m-x-0">
+                  <div class="col-lg-6 new-l__col-1 u-s-p-x-0">
+                    <a class="new-l__img-wrap u-d-block" href="shop-side-version-2.html">
+                      <img class="u-img-fluid u-d-block" src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.15752-9/377154396_381685494205360_7823517189292477607_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=EpD0lcV4-UoAX9WLfRy&_nc_ht=scontent.fsgn2-4.fna&oh=03_AdSi2ITHRKbbYHqSC17b8YyiruvdPKQ9ggMCLAi2MaK_yg&oe=65A3A2F1" alt=""> <!--Hình popup-->
+                    </a>
+                  </div>
+                  <div class="col-lg-6 new-l__col-2">
+                    <div class="new-l__section u-s-m-t-30">
+                      <div class="u-s-m-b-8 new-l--center">
+                        <h3 class="new-l__h3">Đăng ký để nhận ưu đãi</h3>
+                      </div>
+                      <div class="u-s-m-b-30 new-l--center">
+                        <p class="new-l__p1">Để lại Email để nhận thông tin về sản phẩm mới, các chương trình khuyến mãi và hơn thế nữa...</p>
+                      </div>
+                      <form class="new-l__form">
+                        <div class="u-s-m-b-15">
+                          <input class="news-l__input" type="text" placeholder="Địa chỉ Email">
+                        </div>
+                        <div class="u-s-m-b-15">
+                          <button class="btn btn--e-brand-b-2" type="submit">Đăng ký ngay!</button>
+                        </div>
+                      </form>
+                      <div class="u-s-m-b-15 new-l--center">
+                        <p class="new-l__p2">Đăng ký nhận email và tận hưởng các ưu đãi từ MANIS, <br />bao gồm khuyến mãi và các thông tin khác. Bạn có thể hủy đăng ký bất kỳ lúc nào.</p>
+                      </div>
+                      <div class="u-s-m-b-15 new-l--center">
+                        <a class="new-l__link" data-dismiss="modal">Bỏ qua</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--====== Kết thúc Popup đăng kí nhận ưu đãi ======-->
+        <!--====== Kết thúc ======-->
+      </div>
+      <!--====== Kết thúc phần nội dung trang ======-->
+        <!--====== Google Analytics: thay đổi UA-XXXXX-Y thành ID trang web của bạn ======-->
+        <script>
+          window.ga = function() {
+            ga.q.push(arguments)
+          };
+          ga.q = [];
+          ga.l = +new Date;
+          ga('create', 'UA-XXXXX-Y', 'auto');
+          ga('send', 'pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+        <!--====== Vendor Js ======-->
+        <script src="js/vendor.js"></script>
+        <!--====== jQuery Shopnav plugin ======-->
+        <script src="js/jquery.shopnav.js"></script>
+        <!--====== App ======-->
+        <script src="js/app.js"></script>
+        <!--====== Noscript ======-->
+        <!--Đoạn mã HTML trong thẻ <noscript> được sử dụng để cung cấp một cảnh báo cho người dùng khi trình duyệt của họ không hỗ trợ hoặc đã tắt JavaScript. 
+          Nếu JavaScript bị vô hiệu hóa, thì nội dung trong thẻ <noscript> sẽ được hiển thị, thông báo người dùng về việc bật JavaScript trong trình duyệt của họ hoặc nâng cấp lên một trình duyệt hỗ trợ JavaScript.-->
+        <noscript>
+          <div class="app-setting">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="app-setting__wrap">
+                    <h1 class="app-setting__h1">JavaScript is disabled in your browser.</h1>
+                    <span class="app-setting__text">Please enable JavaScript in your browser or upgrade to a JavaScript-capable browser.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </noscript>
+  </body>
+</html>
